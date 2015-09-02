@@ -2,13 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brighton Times</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+      <link rel="stylesheet" href="css/small-ish.css">
+  <link rel="stylesheet" href="css/med-ish.css">
+  <link rel="stylesheet" href="css/large-ish.css">
   </head>
   <body>
+    <div class="container">
 
     <header class="header">
       <div class="header__inner">
@@ -30,7 +34,7 @@
 
     <main>
       <section class="content">
-        <section class="hero">
+        <section class="box hero">
           <article class="description">
             <h2>Absolutely astonishing breaking news!</h2>
             <p>Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko. Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko.</p>
@@ -55,7 +59,7 @@
           </ul>
         </section>
 
-        <section class="scores">
+        <section class="box scores">
           <table class="scores__table">
             <thead>
               <tr>
@@ -106,7 +110,7 @@
           </table>
         </section>
 
-        <section class="weather">
+        <section class="box weather">
           <span class="weather__location">Brighton, UK</span>
           <span class="weather__desc">Sunny</span>
           <span class="weather__today">
@@ -137,7 +141,7 @@
           </ul>
         </section>
 
-        <section class="news recent-news">
+        <section class="news box recent-news">
           <h2 class="news__title">Latest news <a href="#" class="news__more">+ more</a></h2>
           <ul>
             <li class="snippet">
@@ -178,5 +182,6 @@
         </ul>
       </footer>
     </main>
+  </div>
   </body>
 </html>

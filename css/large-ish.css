@@ -1,0 +1,9 @@
+/* Responsive styles for screen viewports of min-width 800px */
+
+@media screen and (min-width: 800px) {
+  .container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

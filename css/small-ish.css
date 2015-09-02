@@ -1,0 +1,11 @@
+/* Responsive styles for screen viewports of min-width 450px */
+
+@media screen and (min-width: 450px) {
+	.light_blue, .green {
+		width: 50%;
+	}
+
+	.header__title {
+		font-size: 4em;
+	}
+}

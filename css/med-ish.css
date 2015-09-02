@@ -1,0 +1,11 @@
+/* Responsive styles for screen viewports of min-width 600px */
+
+@media screen and (min-width: 600px) {
+  .red {
+    width: 33.3333%;
+  }
+
+  .orange {
+    width: 66.6667%;
+  }
+}
