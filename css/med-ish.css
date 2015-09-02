@@ -1,11 +1,36 @@
 /* Responsive styles for screen viewports of min-width 600px */
 
-@media screen and (min-width: 600px) {
-  .red {
-    width: 33.3333%;
-  }
+@media screen and (min-width: 563px) {
 
-  .orange {
-    width: 66.6667%;
-  }
+	.header__title {
+		font-size: 4em;
+	}
+
+	.hero {
+		width: 60%;
+		order: -2;
+	}
+
+	.weather {
+		width: 40%;
+		/*order: -1;*/
+	}
+
+	.top-news {
+		width: 40%;
+		order: -1;
+	}
+
+	.scores {
+		width: 60%;
+	}
+
+	.news__title {
+		font-size: 24px;
+		font-weight: 400;
+	}
+
+	.weather__location {
+		font-weight: 400;
+	}
 }

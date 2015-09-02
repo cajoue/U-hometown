@@ -94,6 +94,43 @@ ul {
  *
  */
 
+/*<!-- TODO: Hide Navigation bar -->*/
+
+.hamburger img {
+  height: 72px;
+  margin-right: 1em;
+  vertical-align: top;
+  margin-top: 12px;
+  float: right;
+}
+
+#hamburger2 svg {
+  width: 50px;
+  height: 75px;
+  fill: orange;
+  background-color: #fff;
+  float: right;
+}
+
+.hamburger-css {
+  position: relative;
+    display: inline-block;
+    width: 1.25em;
+    height: 0.8em;
+    margin-right: 0.3em;
+    border-top: 0.2em solid #000;
+    border-bottom: 0.2em solid #000;
+}
+
+.hamburger-css:before {
+  content: "";
+    position: absolute;
+    top: 0.3em;
+    left: 0px;
+    width: 100%;
+    border-top: 0.2em solid #000;
+}
+
 .nav {
   width: 100%;
   margin-left: auto;
@@ -187,7 +224,7 @@ main {
  */
 
 .top-news {
-  height: 300px;
+  max-height: 300px;
   border-bottom: 1px solid #E0E0E0;
   padding: 1em;
 }
