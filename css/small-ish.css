@@ -2,7 +2,55 @@
 
 @media screen and (min-width: 417px) {
 
-	/*<!-- TODO: Show Navigation bar -->*/
+	.nav {
+		display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+	height: auto;
+	position: relative;
+	transform: translate(0,0);
+	transition: transform 0.3s ease;
+	background-color: #FFFFFF;
+
+	}
+
+
+	a #nav-hamburger {
+  display: none;
+}
+
+a #nav-toggle {
+  display: none;
+}
+
+
+
+.hamburger{
+	display: none;
+}
+
+	.nav__item {
+	display: inline-block;  /*use block in hamburger*/
+	width: 24%;  /* maybe use 100% in hamburger*/
+
+	}
+
+
+.header__logo {
+  height: 72px;
+}
+
+
+
+	/*#hamburger img {
+  		display: none;
+	}
+
+	#close-menu img {
+		display: none;
+	}*/
 
 
 }

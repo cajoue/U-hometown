@@ -9,6 +9,7 @@ body {
   font-family: Roboto;
   font-size: 12px;
   color: #424242;
+
 }
 
 h1, h2, h3, h4, h5 {
@@ -23,6 +24,11 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+
+img, embed, video, object {
+  max-width: 100%;
 }
 
 /*
@@ -74,7 +80,7 @@ ul {
 }
 
 .header__logo {
-  height: 72px;
+  height: 60px;
   margin-right: 1em;
   vertical-align: top;
   margin-top: 12px;
@@ -94,48 +100,33 @@ ul {
  *
  */
 
-/*<!-- TODO: Hide Navigation bar -->*/
 
-.hamburger img {
-  height: 72px;
-  margin-right: 1em;
-  vertical-align: top;
-  margin-top: 12px;
-  float: right;
-}
 
-#hamburger2 svg {
-  width: 50px;
-  height: 75px;
-  fill: orange;
-  background-color: #fff;
-  float: right;
-}
 
-.hamburger-css {
-  position: relative;
-    display: inline-block;
-    width: 1.25em;
-    height: 0.8em;
-    margin-right: 0.3em;
-    border-top: 0.2em solid #000;
-    border-bottom: 0.2em solid #000;
-}
-
-.hamburger-css:before {
-  content: "";
-    position: absolute;
-    top: 0.3em;
-    left: 0px;
-    width: 100%;
-    border-top: 0.2em solid #000;
-}
+/*<!-- Hide Navigation bar in smallest viewport -->*/
 
 .nav {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  /*width: 100%;*/
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+
+width: 300px;
+  /*height: 100%;*/
+  position: absolute;
+  transform: translate(-300px,0);
+  transition: transform 0.3s ease;
+  background-color: orange;
+  z-index: 1;
+
+
+
 }
+
+.nav .open {
+  transform: translate(0,0);
+  box-shadow:0 5px 8px #888888;
+}
+
 
 .nav__list {
   width: 100%;
@@ -145,8 +136,8 @@ ul {
 
 .nav__item {
   box-sizing: border-box;
-  display: inline-block;
-  width: 24%;
+  display: block;  /*use inline-block in other viewports*/
+  width: 100%;  /* this may change but use 24% in wide nav*/
   text-align: center;
   line-height: 24px;
   padding: 24px;
@@ -163,6 +154,77 @@ ul {
   text-decoration: underline;
   color: #212121;
 }
+
+
+/*
+ *
+ * Hamburger Navigation
+ *
+ */
+
+.hamburger {
+  position:absolute;
+  top:0;
+  right:0;
+  height: 72px;
+  /*margin-right: 1em;*/
+  /*vertical-align: top;*/
+  /*margin-top: 12px;*/
+  float: right;
+  z-index: 2;
+
+}
+
+a #nav-hamburger {
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: right;
+  line-height: 24px;
+  padding: .5em;
+  font-size: 2em;
+  color: #BFBFBF;
+  text-decoration: none;
+  position: absolute;
+  right: 1%;
+  top: 1.5%;
+}
+
+a #nav-hamburger:hover {
+  background-color: #08567C;
+}
+
+#nav-hamburger .open {
+  transform: translate(0,0);
+  box-shadow:0 5px 8px #888888;
+}
+
+
+/*
+ *
+ * Hamburger Navigation not mine ;(
+ *
+ */
+
+
+a #nav-toggle {
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: right;
+  line-height: 24px;
+  padding: .5em;
+  font-size: 2em;
+  color: #BFBFBF;
+  text-decoration: none;
+  position: absolute;
+  right: 1%;
+  top: 1.5%;
+}
+
+a #nav-toggle:hover {
+  color: #08567C;
+}
+
+
 
 
 /*
