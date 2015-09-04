@@ -1,56 +1,55 @@
-/* Responsive styles for screen viewports of min-width 526px */
+/* Responsive styles for screen viewports of max-width 433px */
 
-@media screen and (min-width: 417px) {
+@media screen and (max-width: 433px) {
 
 	.nav {
+		width: 300px;
+		/*height: 100%;*/
 		display: block;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-
-	height: auto;
-	position: relative;
-	transform: translate(0,0);
-	transition: transform 0.3s ease;
-	background-color: #FFFFFF;
+		position: absolute;
+		transform: translate(-300px,0);
+		transition: transform 0.3s ease;
+		background-color: orange;
+		z-index: 1;
 
 	}
 
-
-	a #nav-hamburger {
-  display: none;
-}
-
-a #nav-toggle {
-  display: none;
-}
-
-
-
-.hamburger{
-	display: none;
-}
+	.nav .open {
+		transform: translate(0,0);
+		box-shadow:0 5px 8px #888888;
+	}
 
 	.nav__item {
-	display: inline-block;  /*use block in hamburger*/
-	width: 24%;  /* maybe use 100% in hamburger*/
+		/*display: block;  use block in hamburger*/
+		width: 100%;  /* maybe use 100% in hamburger*/
+	}
 
+	a #nav-toggle {
+		display: inline-block;
+	}
+
+	.header__logo {
+		height: 60px;
+	}
+
+	.header__title {
+		font-size: 3em;
 	}
 
 
-.header__logo {
-  height: 72px;
+
+	/*a #nav-hamburger {
+  display: none;
+  }*/
+
+
+/*.hamburger{
+	display: none;
 }
+*/
 
 
 
-	/*#hamburger img {
-  		display: none;
-	}
-
-	#close-menu img {
-		display: none;
-	}*/
 
 
 }
