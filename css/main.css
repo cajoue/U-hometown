@@ -9,14 +9,17 @@ body {
   font-family: Roboto;
   font-size: 12px;
   color: #424242;
+  /*overflow-x: hidden;  from other source*/
 }
+
 
 h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
-header, nav, footer, section, article, div, main {
+header, nav, footer, section, article, div, {
   box-sizing: border-box;
+  /*width: 100%;*/
 }
 
 ul {
@@ -24,6 +27,11 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+/*img, embed, video, object {
+  max-width: 100%;
+}*/
+
 
 
 /*
@@ -61,6 +69,19 @@ ul {
 .orange {
   background-color: #F79420;
 }
+
+
+/*
+ *
+ * Container
+ *
+ */
+
+/*.container {
+  display: flex;
+  flex-wrap: wrap;
+}*/
+
 
 /*
  *
@@ -102,52 +123,23 @@ ul {
  *
  */
 
+
 /*
 *
 *
-.nav-top for general case
-*
+.nav-top for general case  (but does this really count as mobile first?)
+**/
 .nav-top {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-}*/
-
-
+}
 
 /*
  *
- * .nav for smallest viewport
+ * list and list items
  *
  */
-
-  /* Hamburger icon */
-a#menu svg {
-        width: 48px;
-        fill: orange;
-        float: right;
-      }
-
-/* Since we're mobile-first, by default, the drawer is hidden. */
-/* renamed nav class to nav-top as it could be confusing... the
-.nav and .nav.open were both just undotted navs in the example */
-
-.nav-top {
-  width: 300px;
-  height: 100%;  /* don't want max height in this case - aesthetics*/
-  position: absolute;
-  /* This trasform moves the drawer off canvas. */
-  -webkit-transform: translate(-300px, 0);
-  transform: translate(-300px, 0);
-  /* Optionally, we animate the drawer. */
-  transition: transform 0.3s ease;
-  z-index: 2;
-}
-
-.nav-top.open {
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
 
 .nav__list {
   width: 100%;
@@ -157,8 +149,8 @@ a#menu svg {
 
 .nav__item {
   box-sizing: border-box;
-  display: block; /*inline-block for wide screen*/
-  width: 100%; /* 24 % for wide screen*/
+  display: inline-block; /*block for narrow screen*/
+  width: 24%; /*  100% for narrow screen*/
   text-align: center;
   line-height: 24px;
   padding: 24px;
@@ -172,8 +164,8 @@ a#menu svg {
 }
 
 .nav-top a:hover {
-  text-decoration: underline;
-  color: #212121;
+  text-decoration: none;
+  color: #08567C;
 }
 
 
@@ -235,6 +227,7 @@ main {
   height: 300px;
   border-bottom: 1px solid #E0E0E0;
   padding: 1em;
+  width: 100%;
 }
 
 .news__title {
@@ -278,6 +271,7 @@ main {
 
 .scores {
   padding-top: 1em;
+  flex-grow: 1; /* udacity solution */
 }
 
 .scores__table {
@@ -325,6 +319,7 @@ main {
 
 .weather {
   padding: 1em;
+  flex-grow: 1; /* udacity solution */
 }
 
 .weather__location {
@@ -378,6 +373,7 @@ main {
  */
 
 .recent-news {
+  flex-grow: 1;
   clear: both;
   padding: 1em;
 }
@@ -433,45 +429,3 @@ footer a {
 }
 
 
-/*
- *
- * Media Queries
- *
- */
-
-/* reposition back to normal spot
- * main will grow to fit the rest of the viewport*/
-
-      /* If there is enough space (> 600px), we keep the drawer open all the time. */
-@media screen and (min-width: 600px;) {
-
- /* We open the drawer. */
-  .nav-top {
-    position: relative;
-    transform: translate(0, 0);
-      -webkit-transform: translate(0, 0);
-
- /* width: 100%;
-  margin-left: auto;
-  margin-right: auto;*/
-
-  }
-
-  /* We use Flexbox on the parent. */
-  body {
-    display: flex;
-    flex-flow: row nowrap;
-  }
-  main {
-    width: auto;
-    /* Flex-grow stretches the main content to fill all available space. */
-    flex-grow: 1;
-  }
-}
-
- /* If there is space (> 800px), we keep the drawer open by default. */
-      @media (min-width: 800px) {
-        main > #menu:after {
-          content: 'The drawer stays open if width > 800px';
-        }
-      }
