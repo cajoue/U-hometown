@@ -15,7 +15,8 @@
 a#menu svg {
         width: 48px;
         fill: orange;
-        float: right;
+        /*float: right;*/
+
       }
 
 
@@ -27,14 +28,14 @@ a#menu svg {
 
 
 
-@media screen and (max-width: 549px) {
+@media screen and (max-width: 466px) {
   .header__logo {
     height: 48px;
     margin-right: 0.5em;
   }
   .header__title {
     margin-left: 0;
-    font-size: 2em;
+    font-size: 2.5em;
     vertical-align: bottom; 
   }
   .nav-top {
@@ -62,15 +63,25 @@ a#menu svg {
     display: inline-block;
     position: absolute;
     right: 0;
-    padding: 1em;
+    padding: 1em 0.5em;
   }
   .header__menu svg {
     width: 32px;
     fill: #E0E0E0;
   }
+
+  .header__inner {
+    height: 75px;
+  }
 }
 
 @media screen and (min-width: 550px) {
+  
+.header__inner {
+  justify-content: flex-start;
+  height: 100px;
+}
+
   .hero {
     order: 0;
     width: 60%;
