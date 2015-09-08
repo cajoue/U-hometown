@@ -1,3 +1,10 @@
+/* Box-sizing border-box */
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+
 body, html, main {
   margin: 0;
   padding: 0;
@@ -16,9 +23,9 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
-header, nav, footer, section, article, div, {
-  box-sizing: border-box;
-  /*width: 100%;*/
+header, nav, footer, section, article, div, main {
+  display: block;
+  width: 100%;
 }
 
 ul {
@@ -26,11 +33,6 @@ ul {
   padding: 0;
   margin: 0;
 }
-
-/*img, embed, video, object {
-  max-width: 100%;
-}*/
-
 
 
 /*
@@ -54,20 +56,42 @@ ul {
  */
 
 
-
-
-.dark_blue {
-  background-color: #2A457A;
-  color: #efefef;
-}
-
-.light_blue {
-  background-color: #099DD9;
+.red {
+  background-color: #e74c3c;
 }
 
 .orange {
   background-color: #F79420;
 }
+
+.yellow {
+  background-color: #f1c40f;
+}
+
+.green {
+  background-color: #2ecc71;
+}
+
+.blue {
+  background-color: #099DD9;
+}
+
+.indigo {
+  background-color: #2A457A;
+}
+
+.violet {
+  background-color: #9b59b6;
+}
+
+.light-grey {
+  background-color: #bdc3c7;
+}
+
+.grey {
+  background-color: #34495e;
+}
+
 
 
 /*
@@ -75,12 +99,6 @@ ul {
  * Container
  *
  */
-
-/*.container {
-  display: flex;
-  flex-wrap: wrap;
-}*/
-
 
 /*
  *
@@ -101,13 +119,9 @@ ul {
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
-  /*justify-content: space-around;*/
   align-items: center;
 }
 
-.header__inner > * {
-  /*padding: 10px;*/
-}
 
 .header__logo {
   height: 72px;
@@ -333,6 +347,9 @@ main {
 .weather {
   padding: 1em;
   flex-grow: 1; /* udacity solution */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .weather__location {
@@ -347,12 +364,14 @@ main {
 }
 
 .weather__today {
-  width: 60%;
+  width: 100%;
   vertical-align: middle;
 }
 
 .weather__today__image {
-  vertical-align: middle
+  vertical-align: middle;
+  display: inline-block;
+  width: 66%
 }
 
 .weather__today__temp {
