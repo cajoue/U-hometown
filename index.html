@@ -2,24 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brighton Times</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <title>The Daily Orbe</title>
+    <link href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
   </head>
   <body>
 
+    
+
     <header class="header">
       <div class="header__inner">
-        <img class="header__logo" src="images/city.png" alt="iconic view of a cityscape">
+        <img class="header__logo" src="images/city.png" alt="iconic view of a cityscape">     
         <h1 class="header__title">
-          The Brighton Times
+          The Daily Orbe
         </h1>
+        <a id="menu" class="header__menu" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
+          </svg>
+        </a>
       </div>
     </header>
 
-    <nav id="drawer" class="nav">
+    <nav id="drawer" class="nav-top">
       <ul class="nav__list">
         <li class="nav__item"><a href="#">News</a></li>
         <li class="nav__item"><a href="#">Events</a></li>
@@ -28,16 +37,19 @@
       </ul>
     </nav>
 
+    
+
     <main>
-      <section class="content">
-        <section class="hero">
+
+      <section class="light-grey content">
+        <section class="red hero">
           <article class="description">
             <h2>Absolutely astonishing breaking news!</h2>
             <p>Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko. Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko.</p>
           </article>
         </section>
 
-        <section class="news top-news">
+        <section class="orange news top-news">
           <h2 class="news__title">Top news <a href="#" class="news__more">+ more</a></h2>
           <ul>
             <li class="top-news__item">
@@ -55,7 +67,7 @@
           </ul>
         </section>
 
-        <section class="scores">
+        <section class="yellow scores">
           <table class="scores__table">
             <thead>
               <tr>
@@ -106,7 +118,7 @@
           </table>
         </section>
 
-        <section class="weather">
+        <section class="blue weather">
           <span class="weather__location">Brighton, UK</span>
           <span class="weather__desc">Sunny</span>
           <span class="weather__today">
@@ -137,7 +149,7 @@
           </ul>
         </section>
 
-        <section class="news recent-news">
+        <section class="green news recent-news">
           <h2 class="news__title">Latest news <a href="#" class="news__more">+ more</a></h2>
           <ul>
             <li class="snippet">
@@ -178,5 +190,22 @@
         </ul>
       </footer>
     </main>
+    <script>
+      /*
+       * Open the drawer when the menu icon is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('#drawer');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+
+    </script>
   </body>
 </html>

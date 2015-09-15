@@ -1,4 +1,4 @@
-# U-hometown
+# U-hometown-Redux
 FEND: Home town project 
 
-The starting point on this project is the point where I finished lesson 2 of Responsive Web Design Fundamentals.
+Restart with clean project code provided in RWDF L4
